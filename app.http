@@ -1,0 +1,32 @@
+### Create a New Product
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+  "name": "Laptop",
+  "price": 1200
+}
+
+### Search for Products by Name
+GET http://localhost:3000/api/products/search?name=Laptop
+
+### Get Paginated Products
+GET http://localhost:3000/api/products?page=1&limit=5
+
+### Filter Products by Price Range and Name
+GET http://localhost:3000/api/products/filter?minPrice=500&maxPrice=1500&name=Laptop
+
+### List All Products
+GET http://localhost:3000/api/products
+
+### Filter by Minimum Price
+GET http://localhost:3000/api/products/filter?minPrice=800
+
+### Filter by Maximum Price
+GET http://localhost:3000/api/products/filter?maxPrice=2000
+
+### Filter by Name Only
+GET http://localhost:3000/api/products/filter?name=Tablet
+
+### Filter by Price Range Only
+GET http://localhost:3000/api/products/filter?minPrice=1000&maxPrice=2000
